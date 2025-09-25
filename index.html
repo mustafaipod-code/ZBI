@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modified ZBI Classification</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="hdr-inner">
+      <h1>🌀 Modified ZBI Classification <span class="badge">v2</span></h1>
+      <button class="btn" onclick="resetForm()">Reset</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="panel" style="margin-bottom:16px">
+      <h2 class="section-title">What do Z, B, and I mean?</h2>
+      <p class="muted">Use the short guide below to understand each head point before scoring.</p>
+      <div class="grid grid-3">
+        <div class="panel">
+          <div class="section-title">Z – Clothing (0–4)</div>
+          <ul class="list">
+            <li><b>Z0</b> Full modesty: full hijab/niqab, loose outfit.</li>
+            <li><b>Z1</b> Relaxed modesty: hijab, few hair strands, fitted allowed.</li>
+            <li><b>Z2</b> Decent non‑hijabi: no hijab, modest clothing.</li>
+            <li><b>Z3</b> Liberal dress: revealing/fashion‑forward.</li>
+            <li><b>Z4</b> <b>Free style</b>: bikini/very exposed outfits.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div class="section-title">B – Behavior (0–3)</div>
+          <ul class="list">
+            <li><b>B0</b> Polite/respectful, traditional manners.</li>
+            <li><b>B1</b> Neutral, normal modern habits.</li>
+            <li><b>B2</b> Liberal/outgoing, clubbing/drinking okay.</li>
+            <li><b>B3</b> Vulgar/toxic: frequent swearing, fights, drugs.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <div class="section-title">I – Ideology (0–3)</div>
+          <ul class="list">
+            <li><b>I0</b> Apolitical/neutral.</li>
+            <li><b>I1</b> Moderate modernist within culture/religion.</li>
+            <li><b>I2</b> Liberal feminist/secularist, activist.</li>
+            <li><b>I3</b> Radical/extremist, aggressively pushes agenda.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-bottom:16px">
+      <h2 class="section-title">How scoring works</h2>
+      <p class="muted">Total = <span class="chip">Z(0–4)</span> + <span class="chip">B(0–3)</span> + <span class="chip">I(0–3)</span> → <b>0–10</b>. Ranges:</p>
+      <ul class="list">
+        <li><b>0–2</b> Ideal Wife Material</li>
+        <li><b>3–5</b> Good Wife Material (with conditions)</li>
+        <li><b>6–7</b> Maybe / Casual Only</li>
+        <li><b>8–10</b> Not Wife Material</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2 class="section-title">Score now</h2>
+      <div class="grid grid-3" style="margin-bottom:14px">
+        <div>
+          <label class="muted">Z – Clothing</label>
+          <select id="z">
+            <option value="0">Z0 – Full Modesty</option>
+            <option value="1" selected>Z1 – Relaxed Modesty</option>
+            <option value="2">Z2 – Decent Non-Hijabi</option>
+            <option value="3">Z3 – Liberal Dress</option>
+            <option value="4">Z4 – Free Style</option>
+          </select>
+        </div>
+        <div>
+          <label class="muted">B – Behavior</label>
+          <select id="b">
+            <option value="0">B0 – Polite / Conservative</option>
+            <option value="1" selected>B1 – Neutral</option>
+            <option value="2">B2 – Liberal / Outgoing</option>
+            <option value="3">B3 – Vulgar / Toxic</option>
+          </select>
+        </div>
+        <div>
+          <label class="muted">I – Ideology</label>
+          <select id="i">
+            <option value="0">I0 – Apolitical / Neutral</option>
+            <option value="1" selected>I1 – Moderate Modernist</option>
+            <option value="2">I2 – Liberal Feminist / Secularist</option>
+            <option value="3">I3 – Radical / Extremist</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="stat-wrap" style="margin-bottom:10px">
+        <div class="stat"><div class="k">Code</div><div class="v" id="code">Z1-B1-I1</div></div>
+        <div class="stat"><div class="k">Total Score</div><div class="v"><span id="score">3</span> / 10</div></div>
+        <div class="stat"><div class="k">Z + B + I</div><div class="v"><span id="zv">1</span> + <span id="bv">1</span> + <span id="iv">1</span></div></div>
+      </div>
+
+      <div id="tier" class="tier yellow"></div>
+    </div>
+
+    <div class="footer">Built for your custom Modified ZBI classification. Use respectfully; people are complex and context matters.</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
